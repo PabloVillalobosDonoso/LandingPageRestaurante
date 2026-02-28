@@ -4,8 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="/assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html"><img src="/assets/img/logo.jpg" alt="Logo" height="80"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link  d-inline" href="#menu">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link d-inline" href="#reserva">Reservar Mesa</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="menu">
+            <h2 class="justify-content-center d-flex">Menú</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
+            <div class="col">
+                <div class="card h-100">
+                <img src="/assets/img/adobodecerdo.png" class="card-img-top" alt="Adobo de Cerdo">
+                <div class="card-body">
+                    <h5 class="card-title">Adobo de Cerdo</h5>
+                    <p class="card-text">Plato tradicional preparado con trozos de carne de cerdo marinados en una mezcla de ajíes o chiles, ajo, vinagre y especias, luego cocidos lentamente hasta quedar tiernos y jugosos. Se caracteriza por su sabor intenso, ligeramente ácido y especiado, y suele acompañarse con arroz, papas o pan.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <img src="/assets/img/ajidegallina.png" class="card-img-top" alt="Aji de Gallina">
+                <div class="card-body">
+                    <h5 class="card-title">Aji de Gallina</h5>
+                    <p class="card-text">Plato tradicional peruano elaborado con gallina o pollo desmenuzado, mezclado en una salsa cremosa a base de ají amarillo, pan remojado, leche y nueces. Se sirve acompañado de arroz blanco, papas cocidas, huevo duro y aceitunas, destacando por su sabor suave, ligeramente picante y textura cremosa.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <img src="/assets/img/picantedecarne.png" class="card-img-top" alt="Picante de Carne">
+                <div class="card-body">
+                    <h5 class="card-title">Picante de Carne</h5>
+                    <p class="card-text">Plato tradicional preparado con trozos de carne de res cocidos en una salsa espesa y sabrosa a base de ajíes o chiles, cebolla, ajo y especias. Se caracteriza por su sabor intenso y ligeramente picante, y suele servirse acompañado de arroz blanco y papas.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <img src="/assets/img/ceviche.png" class="card-img-top" alt="Ceviche">
+                <div class="card-body">
+                    <h5 class="card-title">Ceviche</h5>
+                    <p class="card-text">Plato tradicional latinoamericano preparado con pescado o mariscos frescos marinados en jugo de limón, mezclados con cebolla morada, ají y cilantro. Se caracteriza por su sabor fresco, ácido y ligeramente picante, y suele servirse acompañado de camote, choclo o tostadas.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <img src="/assets/img/polloalamostaza.png" class="card-img-top" alt="Pollo a la Mostaza">
+                <div class="card-body">
+                    <h5 class="card-title">Pollo a la Mostaza</h5>
+                    <p class="card-text">Plato preparado con piezas de pollo cocinadas en una salsa cremosa a base de mostaza, crema o leche, ajo y especias. Se caracteriza por su sabor suave con un toque ligeramente ácido y especiado. Suele acompañarse con arroz, puré de papas o verduras salteadas.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <img src="/assets/img/polloalsiyau.png" class="card-img-top" alt="Pollo al Suyu">
+                <div class="card-body">
+                    <h5 class="card-title">Pollo al Suyu</h5>
+                    <p class="card-text">Plato tradicional andino preparado con presas de pollo cocidas en una salsa espesa y sabrosa, generalmente elaborada con ají amarillo, queso, leche y hierbas aromáticas. Se caracteriza por su textura cremosa y sabor ligeramente picante. Suele servirse acompañado de arroz y papas cocidas.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+
+        <section class="hero" id="reserva">
+            <div class="hero-content text-black">
+                <h1>Haz tu reserva</h1>
+                <p>Comparte con tus amigos y familiares nuestras delicias culinarias</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservar</button>
+            </div>
+        </section>
+
+        <!--Formulario para la reserva-->
+        <div class="modal fade" id="reservaModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Formulario de Reserva</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="formReserva">
+
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="correo" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cantidad de personas</label>
+                        <input type="number" class="form-control" id="personas" min="1" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                        <label class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                        <label class="form-label">Hora</label>
+                        <input type="time" class="form-control" id="hora" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Comentarios adicionales</label>
+                        <textarea class="form-control" id="comentarios"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">
+                        Hacer reserva
+                    </button>
+
+                    </form>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="bg-black text-white d-flex justify-content-center align-items-center" style="height: 100px;">
+        <p class="mb-0 me-3">
+            Copyright © 2026
+        </p>
+        <p class="mb-0">
+            <strong>Nuestras Redes:</strong>
+            <ul class="list-unstyled mb-0 d-flex">
+                <li class="d-inline-block mx-2">
+                    <a href="#" class="text-white text-decoration-none">Facebook</a>
+                </li>
+                <li class="d-inline-block mx-2">
+                    <a href="#" class="text-white text-decoration-none">Instagram</a>
+                </li>
+            </ul>
+        </p>
+        <p class="mb-0">
+            <strong>Contacto: </strong>+569-12345678
+        </p>
+        
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>

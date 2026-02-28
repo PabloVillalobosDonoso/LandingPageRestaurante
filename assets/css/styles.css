@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "header-font";
+    src: url(../font/EduNSWACTCursive-VariableFont_wght.ttf) format("truetype");
+}
+
+nav{
+    font-family: "header-font";
+    background-color: red;
+    height: 13vh;
+}
+
+.reserva{
+    background-image: url("../img/portada2.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero {
+    height: 50vh;
+    background-color: rgba(255, 255, 0, 0.555);
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;;
+}
+
+/* Contenido del formulario */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.cerrar {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
