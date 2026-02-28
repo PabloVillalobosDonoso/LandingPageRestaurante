@@ -3,6 +3,7 @@ const modalElement = document.getElementById("reservaModal");
 const modal = new bootstrap.Modal(modalElement);
 
 //funcion formulario de reserva
+/*
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -22,10 +23,37 @@ form.addEventListener("submit", function(e) {
 
     form.reset();
     modal.hide();
-});
+});*/
+
+//funcion formulario de reserva con onCLick
+function hacerReserva() {
+    const nombre = document.getElementById("nombre").value.trim();
+    const correo = document.getElementById("correo").value.trim();
+    const personas = document.getElementById("personas").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const fecha = document.getElementById("fecha").value;
+    const hora = document.getElementById("hora").value;
+
+    if (!nombre || !correo || !personas || !telefono || !fecha || !hora) {
+        alert("Por favor complete todos los campos obligatorios.");
+        return;
+    }
+
+    alert("Su reserva se ha creado con éxito");
+
+    document.getElementById("formReserva").reset();
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById("reservaModal"));
+    modal.hide();
+}
+
+function abrirModal() {
+    const modal = new bootstrap.Modal(document.getElementById("reservaModal"));
+    modal.show();
+}
 
 //funcion scroll suave
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+/*document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
         e.preventDefault();
 
@@ -38,10 +66,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
         }
     });
-});
+});*/
+
+//funcion scroll suave con onCLick
+function scrollSeccion(id) {
+    const seccion = document.getElementById(id);
+
+    const offset = document.querySelector(".navbar").offsetHeight;
+
+    const posicion = seccion.offsetTop - offset;
+
+    window.scrollTo({
+        top: posicion,
+        behavior: "smooth"
+    });
+}
 
 //Para que el header no tape parte del main
-
 window.addEventListener("load", function() {
     const navbar = document.querySelector(".navbar");
     const main = document.querySelector("main");

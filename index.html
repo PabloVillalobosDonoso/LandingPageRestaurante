@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg sticky-top">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html"><img src="/assets/img/logo.jpg" alt="Logo" height="80"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,10 +20,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link  d-inline" href="#menu">Menú</a>
+                    <a class="nav-link  d-inline" href="#menu" onclick="scrollSeccion('menu')">Menú</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link d-inline" href="#reserva">Reservar Mesa</a>
+                    <a class="nav-link d-inline" href="#reserva" onclick="scrollSeccion('reserva')">Reservar Mesa</a>
                     </li>
                 </ul>
                 </div>
@@ -96,7 +96,8 @@
             <div class="hero-content text-black">
                 <h1>Haz tu reserva</h1>
                 <p>Comparte con tus amigos y familiares nuestras delicias culinarias</p>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservar</button>
+                <button class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#reservaModal" 
+                onclick="abrirModal()">Reservar</button>
             </div>
         </section>
 
@@ -150,7 +151,7 @@
                         <textarea class="form-control" id="comentarios"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-success w-100">
+                    <button type="submit" class="btn btn-success w-100" onclick="hacerReserva()">
                         Hacer reserva
                     </button>
 
