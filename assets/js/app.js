@@ -1,7 +1,3 @@
-const form = document.getElementById("formReserva");
-const modalElement = document.getElementById("reservaModal");
-const modal = new bootstrap.Modal(modalElement);
-
 //funcion formulario de reserva
 /*
 form.addEventListener("submit", function(e) {
@@ -43,12 +39,14 @@ function hacerReserva() {
 
     document.getElementById("formReserva").reset();
 
-    const modal = bootstrap.Modal.getInstance(document.getElementById("reservaModal"));
+    const modalElement = document.getElementById("reservaModal");
+    const modal = window.bootstrap.Modal.getInstance(modalElement);
     modal.hide();
 }
 
 function abrirModal() {
-    const modal = new bootstrap.Modal(document.getElementById("reservaModal"));
+    const modalElement = document.getElementById("reservaModal");
+    const modal = new window.bootstrap.Modal.getOrCreateInstance(modalElement);
     modal.show();
 }
 
