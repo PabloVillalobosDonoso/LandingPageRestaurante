@@ -88,3 +88,29 @@ window.addEventListener("load", function() {
     const navHeight = navbar.offsetHeight;
     main.style.marginTop = navHeight + "px";
 });
+
+window.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navbarHeight = document.querySelector(".navbar").offsetHeight;
+
+    let currentSection = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - navbarHeight - 50;
+        const sectionHeight = section.offsetHeight;
+
+        if (window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active-section");
+
+        if (link.getAttribute("href") === "#" + currentSection) {
+            link.classList.add("active-section");
+        }
+    });
+});

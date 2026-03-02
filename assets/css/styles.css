@@ -9,13 +9,22 @@ nav{
     height: 13vh;
 }
 
+.nav-link {
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-link.active-section {
+    color: white !important;
+}
+/*
 .reserva{
     background-image: url("../img/portada2.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
     
-}
+}*/
 
 .hero {
     height: 50vh;
